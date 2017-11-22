@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication5.personalDetails">
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets left="150.0" right="150.0" top="20.0" />
+         </BorderPane.margin>
+         <children>
+            <MenuBar blendMode="SRC_ATOP" focusTraversable="false" nodeOrientation="RIGHT_TO_LEFT" opacity="0.7" prefHeight="60.0" prefWidth="150.0" styleClass="menuBar">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Edit" />
+                  <Menu mnemonicParsing="false" text="Home" />
+               </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </MenuBar>
+            <ImageView fx:id="imageView" fitHeight="60.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+               <image>
+                  <Image backgroundLoading="true" url="@data/img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TitledPane fx:id="personTitledPane1" collapsible="false" opacity="0.9" prefHeight="600.0" prefWidth="300.0" text="Passengers Details" textFill="WHITE" textOverrun="WORD_ELLIPSIS" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lucida Sans Regular" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="50.0" />
+               </GridPane.margin>
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Title" textFill="#ebe8e8">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox maxWidth="80.0" minWidth="80.0" prefWidth="80.0" GridPane.rowIndex="1" />
+                        <Label text="Firstname" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Lastname" textFill="WHITE" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField styleClass="nameField" maxWidth="280.0" minWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField styleClass="nameField" maxWidth="280.0" minWidth="180.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane fx:id="personTitledPane2" collapsible="false" prefHeight="250.0" prefWidth="300.0" style="-fx-background-image: url('img/trip-logo.png');" text="Contact Details" textOverrun="WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Regular" size="16.0" />
+               </font>
+            </TitledPane>
+            <Button mnemonicParsing="false" onAction="#next" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </center>
+
+  <stylesheets>
+    <URL value="@data/css/style.css" />
+  </stylesheets>
+</BorderPane>

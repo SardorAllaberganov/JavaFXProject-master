@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open_sans.ttf');
+}
+.loginPage{
+    -fx-background-image: url("../img/login-background.png");
+    -fx-background-size: cover;
+    -fx-background-position: 0 center;
+    -fx-background-repeat: no-repeat;
+}
+.root {
+     -fx-background-image: url("../img/airline.jpg");
+     -fx-background-size: cover;
+     -fx-font-family:'Open Sans';
+}
+.menuBar{
+    -fx-border-color: #2196F3;
+    -fx-background-radius: 10;
+    -fx-font-size: 22;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, #E3F2FD, 15, 0, 1, 0);
+    -fx-background-color: rgba(255,255,255,0.6);
+}
+.logo{
+    -fx-background-color: rgba(255,255,255,1);
+}
+.flightPane{
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 20;
+}
+
+.titled-pane > .title{
+  -fx-background-color: #2196F3;
+  -fx-alignment: CENTER_RIGHT;
+  -fx-background-repeat: no-repeat;
+  -fx-background-size: 30px 30px;
+  -fx-background-position: 5 center; 
+}
+#firstTitledPane > .title{
+    -fx-background-image: url('../img/trip-logo.png');
+}
+#secondTitledPane > .title{
+    -fx-background-image: url('../img/number-of-passengers.png');
+}
+#personTitledPane1 > .title{
+    -fx-background-image: url('../img/passenger.png');
+}
+#personTitledPane2 > .title{
+    -fx-background-image: url('../img/passenger-details.png');
+}
+.titled-pane {
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+    -fx-color: #2196F3;
+    -fx-effect: dropshadow(three-pass-box, #E3F2FD, 15, 0, 1, 0);
+    -fx-animated: true;
+    -fx-text-fill: #000;
+}
+.titled-pane:hover {
+    -fx-background-color: none;
+}
+.titled-pane > *.content 
+{
+-fx-background-color: rgba(33,150,243,0.4);
+-fx-background-insets: 0, 0 1 1 1;
+-fx-padding: 0.167em;
+ }
+ .nextButton {
+  -fx-background-image: url('../img/arrow.png');
+  -fx-background-color: #2196F3;
+  -fx-background-repeat: no-repeat;
+  -fx-text-fill: #fff;
+  -fx-alignment:BASELINE_LEFT;
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-background-size: 30px 30px;
+  -fx-background-position: 60 center; 
+  -fx-background-radius: 20;
+}
+.nextButton:hover {
+    -fx-background-color: rgba(173, 216,230, 0.6);
+}
+.combo-box .text-field {
+    -fx-font-size: 13;
+    -fx-font-weight:bold;
+    -fx-prompt-text-fill: rgba(0, 0, 0, 1) ;
+}
+.combo-box .text-field:focused {
+    -fx-prompt-text-fill: transparent ;
+}
+.menu .label
+{
+    -fx-text-fill: black;
+    
+}
+#depDate .text-field, #retDate .text-field {
+    -fx-prompt-text-fill: rgba(0, 0, 0, 0.7);
+}
+
+
+.date-picker-popup {
+    -fx-background-color: #2196F3;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-padding: 0.25em 0.583333em 0.25em 0.583333em; /* 3 7 3 7 */
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup > * > .spinner > .button > .left-arrow,
+.date-picker-popup > * > .spinner > .button > .right-arrow {
+    -fx-background-color: #b3b3b3;
+    -fx-background-insets: 0;
+    -fx-effect: null;
+}
+
+.date-picker-popup > * > .spinner > .button:hover > .left-arrow,
+.date-picker-popup > * > .spinner > .button:hover > .right-arrow {
+    -fx-background-color: white;
+}
+
+.date-picker-popup > * > .spinner {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > * > .spinner .label {
+    -fx-text-fill: #b3b3b3;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: #4a4a4a;
+    -fx-padding: 0;
+}
+
+.date-picker-popup > * > .day-name-cell,
+.date-picker-popup > * > .week-number-cell {
+    -fx-font-size: 0.75em;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup > * > .day-cell {
+
+    -fx-border-color: #4a4a4a;
+    -fx-background: #4a4a4a;
+    -fx-background-color: #4a4a4a;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: #999999, #4a4a4a;
+    -fx-background-insets: 0, 3;
+}
+
+.date-picker-popup > * > .day-cell.selected {
+    -fx-background-color: #999999, #4a4a4a;
+    -fx-background-insets: 0, 3;
+}
+
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+    -fx-background-color: #4a4a4a;
+    /*-fx-text-fill: #999999;*/
+    -fx-opacity: 0.3;
+}
+
+.date-picker-popup > * > .today {
+    -fx-background-color: #0078d7;
+    -fx-background-insets: 0;
+}
+.nameField{
+    -fx-prompt-text-fill: #000;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16;
+}
+.numberOfPassengers{
+    -fx-background-color: none;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: white;
+    -fx-transition: left 0.1s ease-in-out, right 0.1s ease-in-out;
+}
+.numberOfPassengers:focused {
+    -fx-border-color: #0078d7;
+
+}
+.title-of-passenger{
+    -fx-background-color: none;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: white;
+}
+.title-of-passenger:focused{
+    -fx-background-color: #b3b3b3;
+}
+.titleComboBox{
+    -fx-prompt-text-fill: #000;
+    -fx-font-weight: bold;
+}

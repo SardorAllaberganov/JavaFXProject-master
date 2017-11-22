@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections ?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication5.main">
+   <top>
+      <GridPane alignment="TOP_CENTER" prefHeight="50.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="20.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets left="150.0" right="150.0" top="20.0" />
+         </BorderPane.margin>
+         <children>
+            <MenuBar blendMode="SRC_ATOP" focusTraversable="false" nodeOrientation="RIGHT_TO_LEFT" opacity="0.7" prefHeight="60.0" prefWidth="150.0" styleClass="menuBar">
+              <menus>
+                <Menu mnemonicParsing="false" text="Edit" />
+                <Menu mnemonicParsing="false" text="Home" />
+              </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </MenuBar>
+            <ImageView fx:id="imageView" fitHeight="60.0" layoutX="29.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+              <image>
+                <Image backgroundLoading="true" url="@data/img/logo.png" />
+              </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane prefHeight="300.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="130.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="30.0" top="30.0" />
+         </BorderPane.margin>
+         <children>
+            <TitledPane fx:id="firstTitledPane" collapsible="false" opacity="0.9" prefHeight="400.0" prefWidth="300.0" text="Select your trip" textFill="WHITE" textOverrun="WORD_ELLIPSIS" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lucida Sans Regular" size="16.0" />
+               </font>
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ComboBox editable="true" prefHeight="35.0" prefWidth="450.0" promptText="From" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                             <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Tashkent" />
+                                    <String fx:value="Samarkand" />
+                                    <String fx:value="Bukhara" />
+                                    <String fx:value="Khiva" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <ComboBox editable="true" prefHeight="35.0" prefWidth="450.0" promptText="To" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Tashkent" />
+                                    <String fx:value="Samarkand" />
+                                    <String fx:value="Bukhara" />
+                                    <String fx:value="Khiva" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <DatePicker fx:id="depDate" prefHeight="35.0" prefWidth="450.0" promptText="Departure Date" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="retDate" prefHeight="35.0" prefWidth="450.0" promptText="Return Date" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="one_way" mnemonicParsing="false" text="One way" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets top="30.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="round_trip" mnemonicParsing="false" text="Round Trip" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets top="30.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane fx:id="secondTitledPane" collapsible="false" prefHeight="120.0" prefWidth="300.0" style="-fx-background-image: url('img/trip-logo.png');" text="Passengers" textOverrun="WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Regular" size="16.0" />
+               </font>
+               <content>
+                  <GridPane prefHeight="82.0" prefWidth="271.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Adult (12+)" GridPane.halignment="LEFT">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Child ( 2-11 )" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Infant ( 0 - 2)" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Class" GridPane.columnIndex="3" GridPane.halignment="LEFT">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <JFXTextField focusColor="WHITE" maxWidth="100.0" minHeight="30.0" unFocusColor="BLACK" GridPane.rowIndex="1" />
+                        <JFXTextField focusColor="WHITE" maxWidth="100.0" minHeight="30.0" unFocusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXTextField focusColor="WHITE" maxWidth="100.0" minHeight="30.0" unFocusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <JFXComboBox focusColor="WHITE" maxWidth="100.0" minHeight="30.0" unFocusColor="BLACK" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <Button fx:id="nextButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#nextButton" prefHeight="40.0" prefWidth="100.0" styleClass="nextButton" text="NEXT" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
+   
+   
+       <stylesheets>
+    <URL value="@data/css/style.css" />
+  </stylesheets>
+</BorderPane>
