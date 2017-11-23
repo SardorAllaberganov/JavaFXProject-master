@@ -5,22 +5,19 @@
  */
 package javafxapplication5;
 
-import java.io.IOException;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
+import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 /**
  *
@@ -53,15 +50,16 @@ public class personalDetails extends Application {
         
         
     }
-    @FXML ToggleGroup groupFlight = new ToggleGroup();
-    @FXML RadioButton one_way = new RadioButton();
-    @FXML RadioButton round_trip = new RadioButton();
-    @FXML DatePicker retDate = new DatePicker();
-    @FXML DatePicker depDate = new DatePicker();
+
+    @FXML
+    private ToggleGroup groupFlight = new ToggleGroup();
+    @FXML
+    private RadioButton one_way = new RadioButton();
+    @FXML
+    private RadioButton round_trip = new RadioButton();
+
     
     public void initialize() {
-        depDate.setEditable(false);
-        retDate.setEditable(false);
         round_trip.setSelected(true);
         round_trip.setToggleGroup(groupFlight);
         one_way.setToggleGroup(groupFlight);

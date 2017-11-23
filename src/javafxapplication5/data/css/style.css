@@ -50,7 +50,6 @@
 }
 .titled-pane {
     -fx-background-radius: 5;
-    -fx-text-fill: #ffffff;
     -fx-color: #2196F3;
     -fx-effect: dropshadow(three-pass-box, #E3F2FD, 15, 0, 1, 0);
     -fx-animated: true;

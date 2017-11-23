@@ -5,28 +5,27 @@
  */
 package javafxapplication5;
 
-import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
+import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 /**
  *
  * @author sardor allaberganov
  */
 public class main extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -46,12 +45,12 @@ public class main extends Application {
         primaryStage.show();
         
             } catch (IOException e) {
-                
             }
         
         
     }
-    @FXML ToggleGroup groupFlight = new ToggleGroup();
+    @FXML
+    private ToggleGroup groupFlight = new ToggleGroup();
     @FXML RadioButton one_way = new RadioButton();
     @FXML RadioButton round_trip = new RadioButton();
     @FXML DatePicker retDate = new DatePicker();

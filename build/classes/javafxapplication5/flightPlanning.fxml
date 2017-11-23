@@ -130,7 +130,7 @@
                   </GridPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="secondTitledPane" collapsible="false" prefHeight="120.0" prefWidth="300.0" style="-fx-background-image: url('img/trip-logo.png');" text="Passengers" textOverrun="WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TitledPane fx:id="secondTitledPane" collapsible="false" prefHeight="120.0" prefWidth="300.0" text="Passengers" textOverrun="WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Lucida Sans Regular" size="16.0" />
                </font>
