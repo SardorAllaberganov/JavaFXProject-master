@@ -1,7 +1,10 @@
 package javafxapplication5;
 
 import javafx.application.Application;
+import javafx.event.Event;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -29,5 +32,15 @@ public class Intro extends Application {
         } catch (IOException e) {
 
         }
+    }
+    @FXML
+    public void goMain(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("flightPlanning.fxml"));
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
     }
 }
