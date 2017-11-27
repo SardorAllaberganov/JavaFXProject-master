@@ -206,3 +206,8 @@
     -fx-prompt-text-fill: #000;
     -fx-font-weight: bold;
 }
+.intro-label{
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}

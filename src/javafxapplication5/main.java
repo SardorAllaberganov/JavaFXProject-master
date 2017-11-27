@@ -45,9 +45,7 @@ public class main extends Application {
         primaryStage.show();
         
             } catch (IOException e) {
-            }
-        
-        
+        }
     }
     @FXML
     private ToggleGroup groupFlight = new ToggleGroup();
