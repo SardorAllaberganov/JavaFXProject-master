@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -8,51 +15,74 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <?import java.net.URL?>
+
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication5.Intro">
     <stylesheets>
         <URL value="@data/css/style.css" />
     </stylesheets>
-   <top>
-       <GridPane BorderPane.alignment="CENTER">
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <BorderPane.margin>
+                <Insets top="50.0" />
+            </BorderPane.margin>
+           <children>
+               <Label text="Welcome To" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                   <font>
+                       <Font name="System Bold" size="44.0" />
+                   </font>
+               </Label>
+               <ImageView fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <image>
+                      <Image url="@data/img/introLogo.png" />
+                  </image>
+               </ImageView>
+           </children>
+        </GridPane>
+    </top>
+    <center>
+        <Label styleClass="intro-label" text="Online Ticket Reservation" textFill="WHITE" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold Italic" size="34.0" />
+            </font>
+            <BorderPane.margin>
+                <Insets top="30.0" />
+            </BorderPane.margin>
+        </Label>
+    </center>
+   <bottom>
+       <GridPane prefHeight="244.0" prefWidth="600.0" BorderPane.alignment="CENTER">
            <columnConstraints>
-               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
            </columnConstraints>
            <rowConstraints>
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
            </rowConstraints>
-           <BorderPane.margin>
-               <Insets top="50.0"/>
-           </BorderPane.margin>
-           <Label text="Welcome To" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
-              <font>
-                  <Font name="System Bold" size="44.0"/>
-              </font>
-           </Label>
-           <ImageView fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true"
-                      GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
-               <Image url="@data/img/introLogo.png"/>
-           </ImageView>
+          <children>
+              <JFXButton alignment="TOP_CENTER" contentDisplay="TOP" ripplerFill="BLACK" text="GET STARTED" textFill="WHITE" onAction="#goMain" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                 <font>
+                     <Font size="26.0" />
+                 </font>
+                 <GridPane.margin>
+                     <Insets />
+                 </GridPane.margin>
+              </JFXButton>
+              <JFXButton text="ADMIN" textFill="WHITE" GridPane.halignment="CENTER" onAction="#goLogin" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                 <font>
+                     <Font size="17.0" />
+                 </font>
+                 <GridPane.margin>
+                     <Insets bottom="50.0" />
+                 </GridPane.margin>
+              </JFXButton>
+          </children>
        </GridPane>
-   </top>
-   <bottom>
-      <JFXButton onAction="#goMain" ripplerFill="BLACK" text="GET STARTED" textFill="#fffbfb" BorderPane.alignment="TOP_CENTER">
-         <BorderPane.margin>
-            <Insets bottom="150.0" />
-         </BorderPane.margin>
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </JFXButton>
    </bottom>
-   <center>
-      <Label text="Online Ticket Reservation" styleClass="intro-label" textFill="WHITE" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="System Bold Italic" size="34.0" />
-         </font>
-         <BorderPane.margin>
-            <Insets top="30.0" />
-         </BorderPane.margin>
-      </Label>
-   </center>
 </BorderPane>

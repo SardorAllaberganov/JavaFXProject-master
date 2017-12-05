@@ -8,8 +8,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+
+/**
+ *
+ * @author sardor allaberganov
+ */
 
 public class Intro extends Application {
 
@@ -36,6 +40,16 @@ public class Intro extends Application {
     @FXML
     public void goMain(Event event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("flightPlanning.fxml"));
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void goLogin(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene scene = new Scene(root);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

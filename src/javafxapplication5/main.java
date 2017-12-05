@@ -47,6 +47,8 @@ public class main extends Application {
             } catch (IOException e) {
         }
     }
+
+
     @FXML
     private ToggleGroup groupFlight = new ToggleGroup();
     @FXML RadioButton one_way = new RadioButton();

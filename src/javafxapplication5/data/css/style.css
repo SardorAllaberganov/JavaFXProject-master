@@ -3,11 +3,12 @@
     src: url('../fonts/open_sans.ttf');
 }
 .loginPage{
-    -fx-background-image: url("../img/login-background.png");
-    -fx-background-size: cover;
-    -fx-background-position: 0 center;
-    -fx-background-repeat: no-repeat;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #ffffff;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
 }
+
 .root {
      -fx-background-image: url("../img/airline.jpg");
      -fx-background-size: cover;
@@ -210,4 +211,10 @@
     -fx-background-color: rgba(0,0,0,0.6);
     -fx-background-radius: 10;
     -fx-padding: 10;
+}
+.mainChoiceBox{
+    -fx-max-height: 28px;
+    -fx-pref-height:28px;
+    -fx-min-height: 28px;
+    -fx-font-size: 15px;
 }
